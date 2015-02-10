@@ -9,6 +9,7 @@ python:
 
 # Django versions for matrix
 env:
+  - DJANGO_VERSION=1.4.15
   - DJANGO_VERSION=1.4.18
   - DJANGO_VERSION=1.5.12
   - DJANGO_VERSION=1.6.10

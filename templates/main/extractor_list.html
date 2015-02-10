@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block container %} 
+ <h1>Extractor List</h1>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Instance</th>
+				<th>File</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for object in object_list %}
+				<tr>
+					<td>{{object.id}}</td>
+					<td>{{object.extractor_name}}</td>
+					<td>{{object.extractor_type}}</td>
+					<td>{{object.instance}}</td>
+					<td>{{object.extractor_file}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

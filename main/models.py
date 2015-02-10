@@ -70,3 +70,4 @@ class Extractor(models.Model):
     
     def __unicode__(self):
         return self.extractor_name
+    

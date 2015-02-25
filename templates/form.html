@@ -4,11 +4,11 @@
 {% block container %} 
 <div class="row from_data">
 	<div class="col-md-12">
-		{% bootstrap_form_errors form %}
-		<form  role="form" class="form-horizontal from_data" method='post'>{% csrf_token %}
+		
+		<form  role="form" class="form-horizontal from_data" method='post' action="{{action}}" >{% csrf_token %}
 		{% bootstrap_form form layout='horizontal' %}
 			<div class="col-sm-offset-2 col-sm-10"> 
-				{% buttons submit='Create' reset="Cancel" %}{% endbuttons %}
+				{% buttons submit='Create/Update' reset="Cancel" %}{% endbuttons %}
 			</div>
 		</form>
 	</div>

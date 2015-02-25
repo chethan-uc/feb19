@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block container %} 
+{% load paginator %}
  <h1>Extractor List</h1>
 	<table class="table table-bordered">
 		<thead>
@@ -20,9 +21,16 @@
 					<td>{{object.extractor_type}}</td>
 					<td>{{object.instance}}</td>
 					<td>{{object.extractor_file}}</td>
-					<td></td>
+					<td><a href="{%url 'extractor_edit' pk=object.id %}"  class="btn btn-warning btn-xs">Edit</a></td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<div class="dataTables_info" id="sample_2_info" role="status" aria-live="polite">
+				{% get_paginator paginator page_obj %}
+			</div>
+		</div>
+	</div> <!--</div> -->
 {% endblock %}

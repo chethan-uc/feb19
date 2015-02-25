@@ -20,8 +20,9 @@ install:
   - pip install -q Django==$DJANGO_VERSION --use-mirrors --quiet
   - pip install coveralls
   - pip install django-bootstrap3
-
-
+  
+script:
+- coverage run manage.py test
 
 # Support Python3 only with Django 1.6+
 # Support Django 1.7+ only with Python 2.7+

@@ -19,7 +19,7 @@ env:
 install:
   - pip install -q Django==$DJANGO_VERSION --use-mirrors --quiet
   - pip install coveralls
-  - pip install -r requirements.txt
+  - pip install django-bootstrap3
 
 # Command to run tests, e.g. python setup.py test
 script:

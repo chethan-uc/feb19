@@ -6,13 +6,13 @@ from django.core.urlresolvers import reverse
 class ExtractorList(ListView):
     model = Extractor
     
-    def get_success_url(self):
-        return reverse('extractor_list')
     
 class ExtractorCreate(CreateView):
     model = Extractor
     template_name = 'form.html'
     
+    def get_success_url(self):
+        return reverse('extractor_list')
 class InstanceCreate(CreateView):
     model = Mst_Instance
     template_name = 'form.html'

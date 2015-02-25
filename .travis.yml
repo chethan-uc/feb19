@@ -2,10 +2,7 @@
 language: python
 python:
   - "2.7"
-  - "2.6"
   - "3.2"
-  - "3.3"
-  - "3.4"
 
 # Django versions for matrix
 env:
@@ -41,6 +38,11 @@ matrix:
       env: DJANGO_VERSION=1.5.12
     - python: "3.4"
       env: DJANGO_VERSION=1.5.12
-    - python: "2.6"
-      env: DJANGO_VERSION=1.7.3
+    - python: "2.7"
+      env: DJANGO_VERSION=1.4.15
+    - python: "2.7"
+      env: DJANGO_VERSION=1.5.12
+    - python: "2.7"
+      env: DJANGO_VERSION=1.4.18
+
 

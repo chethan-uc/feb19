@@ -4,6 +4,7 @@ YES_NO_CHOICES = (
     (1, 'Yes'),
 )
 
+
 class Mst_Extractor_Type(models.Model):
     type_name = models.CharField(max_length=250)
     
@@ -13,14 +14,17 @@ class Mst_Extractor_Type(models.Model):
     class Meta:
         db_table = u'mst_extractor_type'
         verbose_name = u'Extractor Type'
+
     def get_extractor_type(self): #s2
         return self.type_name
-    
+
+
 class Mst_Instance(models.Model):
     private_hostname = models.CharField(max_length=250)
     public_hostname = models.CharField(max_length=250)
     instance_name = models.CharField(max_length=250)
-    is_test_instance = models.IntegerField(choices = YES_NO_CHOICES)
+    is_test_instance = models.IntegerField(choices=YES_NO_CHOICES)
+
     def __unicode__(self):
         return self.instance_name
     
@@ -40,7 +44,7 @@ class Extractor_File(models.Model):
         return self.file_name
     
     class Meta:
-        db_table="extractor_file"
+        db_table = "extractor_file"
         verbose_name = "Extractor File"
 
 
@@ -61,7 +65,7 @@ class Extractor(models.Model):
     slot_to_fetch = models.IntegerField(null=True, blank=True)
     info = models.TextField(blank=True)
     start_case_number = models.IntegerField(null=True, blank=True)
-    number_of_cases_to_fetch = models.IntegerField(default = 0)
+    number_of_cases_to_fetch = models.IntegerField(default=0)
     threshold = models.IntegerField(null=True, blank=True)
     number_of_digits_in_case_number = models.IntegerField(null=True, blank=True)
     local_only = models.IntegerField(null=True, blank=True, choices=YES_NO_CHOICES)
@@ -70,4 +74,4 @@ class Extractor(models.Model):
     
     def __unicode__(self):
         return self.extractor_name
-    
+

@@ -62,4 +62,5 @@ class ExtractorTypeCreate(CreateView):
     fields = ['type_name']
 
     def get_success_url(self):
+        raise Exception("This is demo exception.")
         return reverse('extractor_list')

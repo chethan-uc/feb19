@@ -71,6 +71,7 @@ RAVEN_CONFIG = {
     # If you are using git, you can also automatically configure the
     # release based on the git info.
     'release': 'v1.0.23',
+     'environment':'production',
     'repos': {
         'feb19': {
             # the name of the repository as registered in Sentry

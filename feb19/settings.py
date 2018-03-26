@@ -70,7 +70,7 @@ RAVEN_CONFIG = {
     'dsn': 'https://8e730adbb30c465eb9ae38042397db0e:691c34364d634327baf865fc3ec6f139@sentry.io/623551',
     # If you are using git, you can also automatically configure the
     # release based on the git info.
-    'release': 'v1.0.23',
+    'release': 'v1.0.24',
     'environment':'production',
     'repos': {
         'feb19': {

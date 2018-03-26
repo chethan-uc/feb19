@@ -17,7 +17,7 @@ log = subprocess.Popen([
 commits = log.stdout.read().decode().strip().split('\n')
 
 data = {
-    'commits': [{'id': c, 'repository': 'my-repo-name'} for c in commits],
+    'commits': [{'id': c, 'repository': 'abhijo89/feb19'} for c in commits],
     'version': 'v1.0.23',
     'projects': ['demo-django', ],
 }

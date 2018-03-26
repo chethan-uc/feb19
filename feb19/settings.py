@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import raven
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -33,6 +34,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'raven.contrib.django.raven_compat',
     'bootstrap3',
     'main',  # s2
 )
@@ -62,6 +64,14 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
+
+
+RAVEN_CONFIG = {
+    'dsn': 'https://8e730adbb30c465eb9ae38042397db0e:691c34364d634327baf865fc3ec6f139@sentry.io/623551',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    'release': 'v1.0.23',
+}
 
 LANGUAGE_CODE = 'en-us'
 

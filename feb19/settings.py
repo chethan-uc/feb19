@@ -71,13 +71,10 @@ RAVEN_CONFIG = {
     # If you are using git, you can also automatically configure the
     # release based on the git info.
     'release': 'v1.0.23',
-     'environment':'production',
+    'environment':'production',
     'repos': {
         'feb19': {
-            # the name of the repository as registered in Sentry
             'name': 'abhijo89/feb19',
-            # the prefix where the local source code is found in the repo
-            # 'prefix': 'src',
         }
 }
 }

@@ -39,6 +39,7 @@ def get_all_commit_list():
 
     return log.stdout.read().decode().strip().split('\n')
 
+
 def post_data():
     commits = get_all_commit_list()
     data = {
@@ -52,6 +53,7 @@ def post_data():
         json=data,
         headers={'Authorization': 'Bearer {}'.format(SENTRY_API_TOKEN)},
     )
-    print(res.text)
+    print(res.json())
     write_sha()
 
+post_data()
